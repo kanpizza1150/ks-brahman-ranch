@@ -13,14 +13,13 @@ const App = () => {
     const _getRoutes = () => {
         return (
             <>
-                <Route exact path='/' component={LandingPage} />
-                <Route path='/cows' component={CattlePage} />
-                <Route path='/sires' component={CattlePage} />
+                <Route exact path='/home' component={LandingPage} />
+                <Route path='/cattle/:cattleType' component={CattlePage} />
             </>)
     }
     return (
         <>
-            <Helmet title="Home" />
+            <Helmet />
             <GlobalStyle />
             <MainWrapper>
                 <Router>

@@ -7,7 +7,8 @@ export const FooterWrapper = styled.div`
     ${setFlex('space-around')};
     flex-direction:column;
     flex-wrap:wrap;
-    height:35vh;
+    min-height:35vh;
+    height:100%;
 `
 
 export const ContentWrapper = styled.div`
@@ -20,7 +21,11 @@ export const ContentWrapper = styled.div`
 export const ContentContainer = styled.div`
  ${setFlex()};
  flex-direction:column;
- width: 30vw;
+ width: ${props => props.width || `20vw`};
+ .title{
+    align-self:flex-start;
+ }
+
 `
 export const MediaWrapper = styled.div`
  ${setFlex()};
@@ -39,7 +44,7 @@ export const Edge = styled.div`
 export const Copyright = styled.div`
     font-size:1rem;
 `
-export const MediaLink = styled.button`
+export const MediaLink = styled.a`
     border:1px solid ${setColor.white};
     border-radius:50%;
     margin:1rem;

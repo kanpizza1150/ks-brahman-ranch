@@ -16,7 +16,6 @@ export const MainWrapper = styled.div`
     ${setFlex('space-between', '')}
     flex-direction: column;
     min-height: 100vh;
-
 `
 
 export const BodyWrapper = styled.div`
@@ -34,10 +33,8 @@ export const GlobalStyle = createGlobalStyle`
         text-decoration: none;
         list-style: none;
     }
-
     html {
         font-size: 62.5%;
-
     }
     body {
         margin:0;

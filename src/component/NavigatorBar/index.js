@@ -1,13 +1,12 @@
 import React from 'react'
 import { NavWrapper } from './styled'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 const NavigatorBar = () => {
     return (
         <NavWrapper>
-            <Link className='menu' to="/">Home</Link>
-            <Link className='menu' to="/sires">Sires</Link>
-            <Link className='menu' to="/cows">Cows</Link>
-            <Link className='menu' to="/about-us">About us</Link>
+            <NavLink className='menu' activeClassName='menu active' to="/home">Home</NavLink>
+            <NavLink className='menu' activeClassName='menu active' to="/cattle/sires">Sires</NavLink>
+            <NavLink className='menu' activeClassName='menu active' to="/cattle/cows">Cows</NavLink>
         </NavWrapper>
     )
 }

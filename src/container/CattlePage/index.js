@@ -1,9 +1,12 @@
 import React from 'react'
+import Helmet from "../../component/Helmet"
 
-const CattlePage = () => {
+const CattlePage = ({ match }) => {
+    const activePage = match.params?.cattleType.charAt(0).toUpperCase() + match.params?.cattleType.slice(1)
     return (
         <div>
-            CattlePage
+            <Helmet title={activePage} />
+            {activePage}
         </div>
     )
 }

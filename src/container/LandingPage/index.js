@@ -1,16 +1,14 @@
 import React from 'react'
 import { Section } from './styled'
+import Helmet from "../../component/Helmet"
+
 const LandingPage = () => {
     return (
+
         <div>
-            <Section>
-                LandingPage1
-        </Section>
-            <Section>
-                LandingPage2
-        </Section>
-
-
+            <Helmet title="Home" />
+            <Section>Landing Page section 1</Section>
+            <Section>Landing Page section 2</Section>
         </div>
     )
 }

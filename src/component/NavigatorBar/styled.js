@@ -9,5 +9,9 @@ export const NavWrapper = styled.div`
     .menu{
         cursor:pointer;
         margin:auto;
+        color:white;
+        &.active{
+            color:goldenrod;
+        }
     }
 `
