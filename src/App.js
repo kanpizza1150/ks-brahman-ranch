@@ -7,15 +7,20 @@ import LandingPage from "./container/LandingPage"
 import CattlePage from "./container/CattlePage"
 import {
     BrowserRouter as Router,
-    Route
+    Redirect,
+    Route,
+    Switch
 } from "react-router-dom"
 const App = () => {
     const _getRoutes = () => {
         return (
-            <>
+            <Switch>
                 <Route exact path='/home' component={LandingPage} />
                 <Route path='/cattle/:cattleType' component={CattlePage} />
-            </>)
+                <Route path='*'>
+                    <Redirect to='/home' />
+                </Route>
+            </Switch>)
     }
     return (
         <>
