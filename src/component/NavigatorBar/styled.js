@@ -1,8 +1,7 @@
 import styled from 'styled-components'
 import { setFlex } from '../../globalStyle'
 export const NavWrapper = styled.div`
-    width:100vw;
-    height:3rem;
+    height:5rem;
     ${setFlex('space-between')};
     background-color:black;
     color:white;

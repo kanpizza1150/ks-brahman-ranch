@@ -1,23 +1,20 @@
 import styled from 'styled-components'
 import { setColor, setFlex } from '../../globalStyle'
 export const FooterWrapper = styled.div`
-    width:100vw;
-    min-height:50vh;
-    height:fit-content;
     background-color:${setColor.black};
     color:${setColor.white};
     padding:5rem;
     ${setFlex('space-around')};
     flex-direction:column;
     flex-wrap:wrap;
-
+    height:35vh;
 `
 
 export const ContentWrapper = styled.div`
  ${setFlex('center', 'space-between')};
  width:100%;
  flex-wrap:wrap;
- height:10vh;
+ height:10rem;
 
 `
 export const ContentContainer = styled.div`

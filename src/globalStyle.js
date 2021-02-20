@@ -13,12 +13,15 @@ export const setFlex = (primary = 'center', secondary = 'center') => css`
 `
 
 export const MainWrapper = styled.div`
-     max-height: 100vw;
-    overflow: hidden;
+    ${setFlex('space-between', '')}
+    flex-direction: column;
+    min-height: 100vh;
+
 `
+
 export const BodyWrapper = styled.div`
-   height:50rem;
    ${setFlex()};
+   height:100%;
 `
 
 
@@ -28,21 +31,23 @@ export const GlobalStyle = createGlobalStyle`
         margin: 0;
         padding: 0;
         font-family: 'Kanit', sans-serif;
-        box-sizing: border-box;
         text-decoration: none;
-        list-style: none;}
+        list-style: none;
+    }
+
     html {
         font-size: 62.5%;
+
     }
     body {
         margin:0;
         padding:0;
         font-size:16px;
+        box-sizing: border-box;
     }
     button{
         outline:none;
         cursor:pointer;
         border:none;
     }
-
 `
