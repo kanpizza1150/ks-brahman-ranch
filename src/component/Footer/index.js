@@ -15,14 +15,14 @@ export default function index() {
                 <h2>KS Brahman Ranch</h2>
             </ContentContainer>
             <ContentContainer>
-                <span>เกี่ยวกับเรา</span>
-                <span>เกี่ยวกับเรา</span>
-                <span>เกี่ยวกับเรา</span>
+                <span>About us</span>
+                <span>About us</span>
+                <span>About us</span>
             </ContentContainer>
             <ContentContainer>
-                <span>เกี่ยวกับเรา</span>
-                <span>เกี่ยวกับเรา</span>
-                <span>เกี่ยวกับเรา</span>
+                <span>About us</span>
+                <span>About us</span>
+                <span>About us</span>
             </ContentContainer>
         </ContentWrapper>
     }

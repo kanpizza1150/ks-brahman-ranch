@@ -1,4 +1,4 @@
-import { css, createGlobalStyle } from 'styled-components'
+import styled, { css, createGlobalStyle } from 'styled-components'
 
 export const setColor = {
     primary: 'red',
@@ -11,6 +11,17 @@ export const setFlex = (primary = 'center', secondary = 'center') => css`
     justify-content:${primary};
     align-items:${secondary};
 `
+
+export const MainWrapper = styled.div`
+     max-height: 100vw;
+    overflow: hidden;
+`
+export const BodyWrapper = styled.div`
+   height:50rem;
+   ${setFlex()};
+`
+
+
 
 export const GlobalStyle = createGlobalStyle`
     *{ 

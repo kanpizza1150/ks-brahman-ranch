@@ -3,7 +3,10 @@ import {NavWrapper} from './styled'
  const  NavigatorBar=() =>{
     return (
         <NavWrapper>
-            <list>home</list>
+            <div className='menu'>menu</div>
+            <div className='menu'>menu</div>
+            <div className='menu'>menu</div>
+            <div className='menu'>menu</div>
         </NavWrapper>
     )
 }
