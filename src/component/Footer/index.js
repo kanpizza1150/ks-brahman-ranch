@@ -29,9 +29,10 @@ export default function index() {
     return (
         <FooterWrapper>
             {_getContent()}
-            <Edge />
-            {_getSocialMedias()}
-            {_getCopyRight()}
+            <div className='bottom__wrapper'>
+                {_getSocialMedias()}
+                {_getCopyRight()}
+            </div>
         </FooterWrapper>
     )
 }

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { setColor, setFlex } from '../../globalStyle'
+import { setColor, setFlex, device } from '../../globalStyle'
 export const FooterWrapper = styled.div`
     background-color:${setColor.black};
     color:${setColor.white};
@@ -9,6 +9,19 @@ export const FooterWrapper = styled.div`
     flex-wrap:wrap;
     min-height:35vh;
     height:100%;
+    .bottom__wrapper{
+        ${setFlex()};
+        flex-direction:column;
+        border-top:1px solid ${setColor.white};
+        width:100%;
+        padding-top:3rem;
+    }
+    @media ${device.mobileL} { 
+        height: 40rem;
+        padding:3rem;
+    }
+
+
 `
 
 export const ContentWrapper = styled.div`
@@ -16,6 +29,11 @@ export const ContentWrapper = styled.div`
  width:100%;
  flex-wrap:wrap;
  height:10rem;
+ @media ${device.mobileL} { 
+    flex-wrap:nowrap;
+    flex-direction:column;
+    height: auto;
+}
 
 `
 export const ContentContainer = styled.div`
@@ -25,6 +43,11 @@ export const ContentContainer = styled.div`
  .title{
     align-self:flex-start;
  }
+ @media ${device.mobileL} { 
+    width:100%;
+    margin-bottom:2rem;
+}
+
 
 `
 export const MediaWrapper = styled.div`
@@ -34,15 +57,16 @@ export const MediaWrapper = styled.div`
     height:1rem;
     width:1rem;
 }
+
+@media ${device.mobileL} { 
+    width:100%;
+}
 `
 
-export const Edge = styled.div`
-    width:100%;
-    border:1px solid ${setColor.white};
-`
 
 export const Copyright = styled.div`
     font-size:1rem;
+    margin-top:1rem;
 `
 export const MediaLink = styled.a`
     border:1px solid ${setColor.white};
