@@ -67,6 +67,9 @@ export const GlobalStyle = createGlobalStyle`
         font-family: 'Kanit', sans-serif;
         text-decoration: none;
         list-style: none;
+        &::-webkit-scrollbar {
+            display: none;
+        }
     }
     html {
         font-size: 62.5%;
@@ -76,6 +79,7 @@ export const GlobalStyle = createGlobalStyle`
         padding:0;
         font-size:16px;
         box-sizing: border-box;
+
     }
     button{
         outline:none;
