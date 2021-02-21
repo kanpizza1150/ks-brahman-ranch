@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { setColor, setFlex, setTransition } from '../../globalStyle'
+import { setFlex, } from '../../globalStyle'
 
 
 export const CattleDetailPageWrapper = styled.div`
