@@ -18,7 +18,7 @@ const CattlePage = ({ match }) => {
     const activePage = match.params?.cattleType.charAt(0).toUpperCase() + match.params?.cattleType.slice(1)
     const _getCard = () => {
         return cattle.map((item) => (<Card>
-            <img src={item.imgSrc} />
+            <img src={item.imgSrc} alt={item.name} />
             <p className='name'>{item.name}</p>
         </Card>))
     }
