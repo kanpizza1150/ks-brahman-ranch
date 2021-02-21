@@ -18,8 +18,8 @@ const size = {
 }
 
 export const device = {
-    mobileS: `(max-width: ${size.mobileM})`,
-    mobileM: `(max-width: ${size.mobileL})`,
+    mobileS: `(max-width: ${size.tablet})`,
+    mobileM: `(max-width: ${size.tablet})`,
     mobileL: `(max-width: ${size.tablet})`,
     tablet: `(max-width: ${size.laptop})`,
     laptop: `(max-width: ${size.laptopL})`,
@@ -52,7 +52,13 @@ export const setTransition = (
 ) => css`
     transition: ${time} ${ele} ${animate};
   `
-
+export const PageWrapper = styled.div`
+  height:100%;
+  width:100%;
+  padding: 3rem 4rem;
+  ${setFlex('flex-start')};
+  flex-direction:column;
+  `
 
 export const GlobalStyle = createGlobalStyle`
     *{ 
