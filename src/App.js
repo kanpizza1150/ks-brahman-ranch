@@ -5,6 +5,7 @@ import NavigatorBar from "./component/NavigatorBar"
 import { BodyWrapper, MainWrapper } from "./globalStyle"
 import LandingPage from "./container/LandingPage"
 import CattlePage from "./container/CattlePage"
+import CattleDetailPage from './container/CattleDetailPage '
 import {
     BrowserRouter as Router,
     Redirect,
@@ -16,7 +17,8 @@ const App = () => {
         return (
             <Switch>
                 <Route exact path='/home' component={LandingPage} />
-                <Route path='/cattle/:cattleType' component={CattlePage} />
+                <Route exact path='/cattle/:cattleType' component={CattlePage} />
+                <Route path='/cattle/:cattleType/:id' component={CattleDetailPage} />
                 <Route path='*'>
                     <Redirect to='/home' />
                 </Route>
