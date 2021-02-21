@@ -1,5 +1,5 @@
 import React from 'react'
-import { FooterWrapper, ContentWrapper, ContentContainer, Edge, Copyright, MediaWrapper, MediaLink } from './styled'
+import { FooterWrapper, ContentWrapper, ContentContainer, Copyright, MediaWrapper, MediaLink } from './styled'
 
 export default function index() {
     const _getSocialMedias = () => {
