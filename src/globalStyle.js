@@ -32,6 +32,7 @@ export const setFlex = (primary = 'center', secondary = 'center') => css`
     display:flex;
     justify-content:${primary};
     align-items:${secondary};
+    align-content:${secondary};
 `
 
 export const MainWrapper = styled.div`

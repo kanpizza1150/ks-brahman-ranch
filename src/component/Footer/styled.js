@@ -25,11 +25,11 @@ export const FooterWrapper = styled.div`
 `
 
 export const ContentWrapper = styled.div`
- ${setFlex('center', 'space-between')};
+display:grid;
+grid-template-columns:repeat(3,1fr);
  width:100%;
- flex-wrap:wrap;
- height:10rem;
  @media ${device.mobileL} { 
+     ${setFlex()};
     flex-wrap:nowrap;
     flex-direction:column;
     height: auto;
@@ -37,9 +37,10 @@ export const ContentWrapper = styled.div`
 
 `
 export const ContentContainer = styled.div`
- ${setFlex()};
+ ${setFlex('flex-start')};
  flex-direction:column;
- width: ${props => props.width || `20vw`};
+ width: 20vw;
+ margin: 2rem;
  .title{
     align-self:flex-start;
  }
@@ -65,18 +66,24 @@ export const ContentContainer = styled.div`
         padding-left:2rem;
      }
      p{
-         color:${setColor.primary};
+        color:${setColor.primary};
      }
      svg{
-         padding-right:1rem;
+        padding-right:1rem;
      }
  }
  h1{
     color:${setColor.primary};
+    text-align:center;
+ }
+ h2{
+    text-align:center;
  }
  @media ${device.mobileL} { 
     width:100%;
+ margin: 0rem;
     margin-bottom:2rem;
+
 }
 
 

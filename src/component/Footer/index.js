@@ -23,11 +23,14 @@ const Footer = () => {
         history.push(path)
     }
     const _getContent = () => {
+        const svgColor = {
+            fill: setColor.gray, height: '2rem'
+        }
         return <ContentWrapper>
-            <ContentContainer width='40vw'>
+            < ContentContainer width='40vw' >
                 <h1>LOGO</h1>
                 <h2>KS Brahman Ranch</h2>
-            </ContentContainer>
+            </ContentContainer >
             <ContentContainer>
                 <button className='sub-menu' onClick={() => _handleMenuClick('/cattle/sires')}>Sires</button>
                 <button className='sub-menu' onClick={() => _handleMenuClick('/cattle/cows')}>Cows</button>
@@ -35,19 +38,19 @@ const Footer = () => {
             <ContentContainer>
                 <div className='detail__wrapper'>
                     <p>Contract us</p>
-                    <span><PhoneIcon fill={setColor.gray} />+66 645454615</span>
-                    <span><MailIcon fill={setColor.gray} />kanpizza1150@gmail.com</span>
-                    <span><ClockIcon fill={setColor.gray} />8.00 - 20.00</span>
+                    <span><PhoneIcon {...svgColor} />+66 645454615</span>
+                    <span><MailIcon {...svgColor} />kanpizza1150@gmail.com</span>
+                    <span><ClockIcon {...svgColor} />8.00 - 20.00</span>
                 </div>
                 <div className='detail__wrapper'>
                     <p>Location</p>
                     <span>
-                        <PinIcon fill={setColor.gray} />
+                        <PinIcon {...svgColor} />
                         39 M.10 Baan Udomsuk, Huai-Krachao District, Kanchanaburi
                     </span>
                 </div>
             </ContentContainer>
-        </ContentWrapper>
+        </ContentWrapper >
     }
     const _getCopyRight = () => <Copyright>@Copyright. All right reserved.</Copyright>
     return (
