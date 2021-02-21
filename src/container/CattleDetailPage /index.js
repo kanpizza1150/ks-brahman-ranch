@@ -1,11 +1,14 @@
 import React from 'react'
 // import Helmet from "../../component/Helmet"
 // import faker from 'faker'
-// import { CardWrapper, Card } from './styled'
-// import { PageWrapper } from '../../globalStyle'
-// import { Switch } from 'react-router-dom'
+import { CattleDetailPageWrapper } from './styled'
+import { PageWrapper } from '../../globalStyle'
 const CattleDetailPage = ({ match, history }) => {
-    return <div>Detail</div>
+    console.log('match', match)
+    return (<CattleDetailPageWrapper>
+        <button onClick={() => history.push(`/cattle/${match.cattleType}`)}>Back</button>
+        <PageWrapper>Detail</PageWrapper>
+    </CattleDetailPageWrapper>)
 }
 
 export default CattleDetailPage
