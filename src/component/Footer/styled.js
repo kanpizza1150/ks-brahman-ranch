@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { setColor, setFlex, device } from '../../globalStyle'
+import { setColor, setFlex, device, setTransition } from '../../globalStyle'
 export const FooterWrapper = styled.div`
     background-color:${setColor.black};
     color:${setColor.white};
@@ -17,7 +17,7 @@ export const FooterWrapper = styled.div`
         padding-top:3rem;
     }
     @media ${device.mobileL} { 
-        height: 40rem;
+        height: 50rem;
         padding:3rem;
     }
 
@@ -42,6 +42,37 @@ export const ContentContainer = styled.div`
  width: ${props => props.width || `20vw`};
  .title{
     align-self:flex-start;
+ }
+ .sub-menu{
+     width:100%;
+     margin:0.5rem;
+     border:1px solid ${setColor.transparent};
+    ${setTransition()};
+     &:hover{
+        border:1px solid ${setColor.primary};
+        color: ${setColor.primary};
+     }
+ }
+ .detail__wrapper{
+     width:100%;
+     margin-bottom:1rem;
+    ${setFlex('flex-start', 'flex-start')};
+    flex-direction:column;
+     span{
+        font-size:1.4rem;
+        color:${setColor.gray};
+    ${setFlex()};
+        padding-left:2rem;
+     }
+     p{
+         color:${setColor.primary};
+     }
+     svg{
+         padding-right:1rem;
+     }
+ }
+ h1{
+    color:${setColor.primary};
  }
  @media ${device.mobileL} { 
     width:100%;

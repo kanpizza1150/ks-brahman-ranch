@@ -1,9 +1,11 @@
 import styled, { css, createGlobalStyle } from 'styled-components'
 
 export const setColor = {
-    primary: 'red',
+    primary: 'goldenrod',
     black: '#000000',
-    white: '#ffffff'
+    white: '#ffffff',
+    gray: '	#787878',
+    transparent: 'transparent'
 }
 const size = {
     mobileS: '320px',
@@ -42,7 +44,13 @@ export const BodyWrapper = styled.div`
    ${setFlex()};
    height:100%;
 `
-
+export const setTransition = (
+    time = '0.2s',
+    ele = 'all',
+    animate = 'ease-in'
+) => css`
+    transition: ${time} ${ele} ${animate};
+  `
 
 
 export const GlobalStyle = createGlobalStyle`
@@ -66,5 +74,7 @@ export const GlobalStyle = createGlobalStyle`
         outline:none;
         cursor:pointer;
         border:none;
+        background-color:${setColor.transparent};
+        color:${setColor.white};
     }
 `
